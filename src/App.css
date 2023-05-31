@@ -1,38 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 .App {
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.weather-main_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(253, 246, 246, .7);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.search-input {
+    border: none;
+    outline: none;
+    padding: .5rem;
+    font-size: 18px;
+    background-color: rgb(6, 6, 145, .4);
+    width: 350px;
+    border-radius: 0 0 20px 0;
+    margin: 1rem;
+    color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.search-button {
+    border: 1px solid rgb(6, 6, 145, .4);
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    color: rgb(6, 6, 145, .4);
+    cursor: pointer;
+    transition: .5s;
+}
+.search-button:hover {
+    background-color: rgb(6, 6, 145, .4);
+    color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.weather-display_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block {
+    color: rgb(6, 6, 145);
+}
+
+.shown-weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 600px;
+    margin: 2rem 0;
+    padding: 2rem;
+    background-color: rgba(13, 14, 82, 0.418);
+    color: whitesmoke;
+    border-radius: 0 0 25px 25px;
+}
+.shown-weather img{
+    margin: 2rem;
+}
+.shown-weather h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+.shown-weather p {
+    font-size: 28px;
 }
